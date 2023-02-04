@@ -27,8 +27,8 @@ class Decoder(nn.Module):
 
     def forward(self, z):
         x = F.relu(self.fc1(z))
-        x = F.relu(self.fc2(z))
-        x = self.fc3(z)
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 
 class VAE(nn.Module):
