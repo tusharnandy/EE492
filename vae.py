@@ -9,7 +9,7 @@ class Encoder(nn.Module):
         self.fc1 = nn.Linear(input_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, hidden_dim)
         self.fc3 = nn.Linear(hidden_dim, z_dim * 2)
-        self.zdim = z_dim
+        self.z_dim = z_dim
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
