@@ -128,7 +128,8 @@ def hard_early_stop(model, optimizer, train_loader, test_loader):
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         train_losses, test_losses = checkpoint['train_losses'], checkpoint['test_losses']
         print("Checkpoint loaded: ")
-        printer(start_epoch, train_loss=train_losses[-1], test_loss=test_losses[-1])
+        printer(start_epoch,
+                train_loss=train_losses[-1], test_loss=test_losses[-1])
         print("")
     for epoch in range(start_epoch+1, start_epoch+args.epochs+1):
         train_loss = train(model, optimizer, train_loader)
@@ -147,8 +148,10 @@ def hard_early_stop(model, optimizer, train_loader, test_loader):
             return model, train_losses, test_losses
         if epoch % 5 == 0:
             save_checkpoint(epoch, model, optimizer, train_losses, test_losses)
-    save_checkpoint((start_epoch+args.epochs), model, optimizer, train_losses, test_losses)
+    save_checkpoint((start_epoch+args.epochs), model,
+                    optimizer, train_losses, test_losses)
     return model, train_losses, test_losses
+
 
 def printer(epoch, train_loss, test_loss):
     print(f"epoch: {epoch}, train loss: {train_loss}, test loss: {test_loss}")
