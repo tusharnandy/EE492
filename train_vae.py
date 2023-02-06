@@ -13,6 +13,6 @@ parser = argparse.ArgumentParser(
     description='train vae for sensitive attribute = 0 and 1\nWeights will be stored at weights/vae[a]_weights.pt'
 )
 parser.add_argument("-d", "--data", help='location of data', type=str)
-# parser.add_argument("-w")
+parser.add_argument("-w", "--weights")
 parser.add_argument("-x", "--device", help='device', type=int, default=0)
 parser.add_argument("-i", "--index_sensitive_attribute", default=-1, help='index of sensitive attribute', type=int)
