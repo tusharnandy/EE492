@@ -108,7 +108,7 @@ def save_checkpoint(epoch, model, optimizer, train_losses, test_losses):
         {
             'epoch': epoch,
             'model_state_dict': model.state_dict(),
-            'optimize_state_dict': optimizer.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
             'train_losses': train_losses,
             'test_losses': test_losses
         },
@@ -127,11 +127,14 @@ def hard_early_stop(model, optimizer, train_loader, test_loader):
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         train_losses, test_losses = checkpoint['train_losses'], checkpoint['test_losses']
-    for epoch in range(start_epoch+1, args.epochs+1):
+        print("Checkpoint loaded: ")
+        printer(start_epoch, train_loss=train_losses[-1], test_loss=test_losses[-1])
+        print("")
+    for epoch in range(start_epoch+1, start_epoch+args.epochs+1):
         train_loss = train(model, optimizer, train_loader)
-        test_loss = train(model, test_loader)
+        test_loss = test(model, test_loader)
         train_losses.append(train_loss)
-        test_losses.append(test_losses)
+        test_losses.append(test_loss)
         printer(epoch, train_loss, test_loss)
         if test_loss < best_loss:
             best_loss = test_loss
@@ -142,6 +145,9 @@ def hard_early_stop(model, optimizer, train_loader, test_loader):
             save_checkpoint(epoch, model, optimizer, train_losses, test_losses)
             print("Early stopping...")
             return model, train_losses, test_losses
+        if epoch % 5 == 0:
+            save_checkpoint(epoch, model, optimizer, train_losses, test_losses)
+    save_checkpoint((start_epoch+args.epochs), model, optimizer, train_losses, test_losses)
     return model, train_losses, test_losses
 
 def printer(epoch, train_loss, test_loss):
@@ -151,6 +157,6 @@ def printer(epoch, train_loss, test_loss):
 if __name__ == '__main__':
     X0_trainloader, X0_testloader, X1_trainloader, X1_testloader = prepare_data()
 
-    vae = VAE(vae = VAE(102, 64, 16).to(device))
+    vae = VAE(102, 64, 16).to(device)
     optimizer = torch.optim.AdamW(vae.parameters(), lr=args.learning_rate)
-    model, train_losses, test_losses = hard_early_stop(vae, optimizer, X0_trainloader, X0_testloader)
+    model, train_losses, test_losses = hard_early_stop(vae, optimizer, X1_trainloader, X1_testloader)
