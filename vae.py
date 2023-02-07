@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import torch.utils.data.dataset as dataset
 
 class Encoder(nn.Module):
-    def __init__(self, input_dim, hidden_dim, z_dim):
+    def __init__(self, input_dim, hidden_dim, z_dim, num_device = 0):
         super().__init__()
         self.fc1 = nn.Linear(input_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, hidden_dim)
@@ -32,15 +32,17 @@ class Decoder(nn.Module):
         return x
 
 class VAE(nn.Module):
-    def __init__(self, input_dim, hidden_dim, z_dim):
+    def __init__(self, input_dim, hidden_dim, z_dim, num_device=0):
         super().__init__()
         self.encoder = Encoder(input_dim, hidden_dim, z_dim)
         self.decoder = Decoder(z_dim, hidden_dim, input_dim)
+        self.device = torch.device(f'cuda:{num_device}' if torch.cuda.is_available() else 'cpu')
+
 
     def forward(self, x):
         mean, log_var = self.encoder(x)
         std = torch.exp(0.5 * log_var)
-        eps = torch.randn_like(std)
+        eps = torch.randn_like(std, device=self.device)
         z = mean + eps * std
         x_hat = self.decoder(z)
         return x_hat, mean, log_var

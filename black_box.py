@@ -21,7 +21,7 @@ class Net(nn.Module):
 class BlackBox():
     def __init__(self, model_filename, device_id=0, save_queries=False):
         # setting device
-        self.device = torch.device(f'cuda:{num_device}' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.device(f'cuda:{device_id}' if torch.cuda.is_available() else 'cpu')
         
         # loading weights of the classifier
         self.clf = Net().to(self.device)
