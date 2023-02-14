@@ -43,7 +43,7 @@ def save_and_get_dataset_keys(name, trace_func):
                 f"Did not find the mapping and key files in {DATA_PATH}/{name}/map_key.pkl. Generating them now..."
             )
             df = initial_preprocess(name)
-            X, _ = get_dataset(name, return_dataframe=True, df=df)
+            X, *_ = get_dataset(name, return_dataframe=True, df=df)
             num_cols = df.select_dtypes(np.number).columns
             all_cols = [(i, x) for i, x in enumerate(X.columns)]
             relevant_cols = [(i, x) for (i, x) in all_cols if x not in num_cols]
@@ -75,11 +75,13 @@ def get_dataset(
     df=None,
 ):
     DATA_PATH = "data"
+    
     if name == "adult_income":
         if df is None:
             df = initial_preprocess(name)
         if return_original_dataframe:
             return df
+        #print('$$$', df.shape)
         categorical_columns = lists = [
             "workclass",
             "education",
@@ -89,18 +91,23 @@ def get_dataset(
             "race",
             "native_country",
         ]
+        #print(df.shape)
         encoder = ce.OneHotEncoder(cols=categorical_columns, use_cat_names=True)
         df1 = encoder.fit_transform(df)
+        #print('gender' in df1.columns)
         df1["gender"] = df1["gender"].apply(lambda x: 1 if x == "Female" else 0)
         df1["income"] = df1["income"].apply(lambda x: 1 if x == ">50K" else 0)
         X = df1.drop("income", axis=1)
         y = df1["income"]
+        #print(df1.shape, X.shape)
         X_cols = df.select_dtypes(np.number).columns.tolist()
+        #print(X_cols)
         non_num_cols = [x for x in X.columns if x not in X_cols]
         X_cols.extend(non_num_cols)
         X = X.reindex(columns=X_cols)
+        #print(X.shape)
         if return_dataframe:
-            return X, y
+            return X, y, df.select_dtypes(np.number).columns.tolist()
         if save_transformed:
             os.makedirs(f"{DATA_PATH}/{name}/", exist_ok=True)
             X.to_csv(f"{DATA_PATH}/{name}/X_unscaled.csv")
@@ -131,60 +138,67 @@ def get_dataset(
 
 
 def get_split_dataset(
-    name, xA, random_state=42, test_size=0.2, train_batch_size=64, test_batch_size=64
+    name, xA, random_state=42, test_size=0.2, train_batch_size=64, test_batch_size=64, 
 ):
     if name == "adult_income":
         if xA != "gender":
             raise ValueError(f"For {name}: expected xA = gender but received {xA}")
-        df = get_dataset(name, return_original_dataframe=True, return_dataloader=False)
-        df_female = df.loc[df["gender"] == "Female"]
-        df_male = df.loc[df["gender"] == "Male"]
-
-        (
-            train_loader_female,
-            test_loader_female,
-            len_train_female,
-            len_test_female,
-            feature_dim_female,
-            num_cols_female
-        ) = get_dataset(
-            name,
-            random_state=random_state,
-            test_size=test_size,
-            train_batch_size=train_batch_size,
-            test_batch_size=test_batch_size,
-            df=df_female,
+        X, y, num_cols = get_dataset(name, return_dataframe=True, return_dataloader=False)
+        female_idx = X['gender'] == 1
+        male_idx = X['gender'] == 0
+        X_female, y_female = X[female_idx], y[female_idx]
+        X_male, y_male = X[male_idx], y[male_idx]
+        
+        X_train_female, X_test_female, y_train_female, y_test_female = train_test_split(
+            X_female, y_female, test_size=test_size, random_state=random_state
         )
-        (
-            train_loader_male,
-            test_loader_male,
-            len_train_male,
-            len_test_male,
-            feature_dim_male,
-            num_cols_male
-        ) = get_dataset(
-            name,
-            random_state=random_state,
-            test_size=test_size,
-            train_batch_size=train_batch_size,
-            test_batch_size=test_batch_size,
-            df=df_male,
-        )
+        X_train_female[num_cols] = minmax_scale(X_train_female[num_cols])
+        X_test_female[num_cols] = minmax_scale(X_test_female[num_cols])
+        yt_train = torch.tensor(y_train_female.values)
+        Xt_train = torch.tensor(X_train_female.values).float()
+        yt_test = torch.tensor(y_test_female.values)
+        Xt_test = torch.tensor(X_test_female.values).float()
+        train_female = torch.utils.data.TensorDataset(Xt_train, yt_train)
+        test_female = torch.utils.data.TensorDataset(Xt_test, yt_test)
 
+        X_train_male, X_test_male, y_train_male, y_test_male = train_test_split(
+            X_male, y_male, test_size=test_size, random_state=random_state
+        )
+        X_train_male[num_cols] = minmax_scale(X_train_male[num_cols])
+        X_test_male[num_cols] = minmax_scale(X_test_male[num_cols])
+        yt_train = torch.tensor(y_train_male.values)
+        Xt_train = torch.tensor(X_train_male.values).float()
+        yt_test = torch.tensor(y_test_male.values)
+        Xt_test = torch.tensor(X_test_male.values).float()
+        train_male = torch.utils.data.TensorDataset(Xt_train, yt_train)
+        test_male = torch.utils.data.TensorDataset(Xt_test, yt_test)
+        train_loader_female = torch.utils.data.DataLoader(
+            train_female, batch_size=train_batch_size, shuffle=True
+        )
+        test_loader_female = torch.utils.data.DataLoader(
+            test_female, batch_size=test_batch_size, shuffle=False
+        )
+        train_loader_male = torch.utils.data.DataLoader(
+            train_male, batch_size=train_batch_size, shuffle=True
+        )
+        test_loader_male = torch.utils.data.DataLoader(
+            test_male, batch_size=test_batch_size, shuffle=False
+        )
         return (
             train_loader_female,
             test_loader_female,
-            len_train_female,
-            len_test_female,
-            feature_dim_female,
-            num_cols_female,
+            len(y_train_female),
+            len(y_test_female),
+            X_female.shape[1],
+            num_cols,
             train_loader_male,
             test_loader_male,
-            len_train_male,
-            len_test_male,
-            feature_dim_male,
-            num_cols_male
+            len(y_train_male),
+            len(y_test_male),
+            X_male.shape[1],
+            num_cols,
         )
+
 
 
 def return_argmax(s):
