@@ -1,0 +1,307 @@
+2023-02-14 00:27:37,817  VAE Training   INFO  Training for gender = 1 with 11935 datapoints
+2023-02-14 00:27:40,883  VAE Training   INFO  Validation loss decreased (inf --> 18.748519).  Saving model ...
+2023-02-14 00:27:40,922  VAE Training   INFO  Epoch: 1/150	Train Loss: 28.6630	Val Loss: 18.7485
+2023-02-14 00:27:41,812  VAE Training   INFO  Validation loss decreased (18.748519 --> 16.862765).  Saving model ...
+2023-02-14 00:27:41,831  VAE Training   INFO  Epoch: 2/150	Train Loss: 17.7224	Val Loss: 16.8628
+2023-02-14 00:27:42,910  VAE Training   INFO  Validation loss decreased (16.862765 --> 15.497454).  Saving model ...
+2023-02-14 00:27:42,975  VAE Training   INFO  Epoch: 3/150	Train Loss: 16.1231	Val Loss: 15.4975
+2023-02-14 00:27:44,005  VAE Training   INFO  Validation loss decreased (15.497454 --> 15.010698).  Saving model ...
+2023-02-14 00:27:44,036  VAE Training   INFO  Epoch: 4/150	Train Loss: 15.2170	Val Loss: 15.0107
+2023-02-14 00:27:44,913  VAE Training   INFO  Validation loss decreased (15.010698 --> 14.663358).  Saving model ...
+2023-02-14 00:27:45,187  VAE Training   INFO  Epoch: 5/150	Train Loss: 14.8196	Val Loss: 14.6634
+2023-02-14 00:27:46,155  VAE Training   INFO  Validation loss decreased (14.663358 --> 14.377407).  Saving model ...
+2023-02-14 00:27:47,268  VAE Training   INFO  Epoch: 6/150	Train Loss: 14.5170	Val Loss: 14.3774
+2023-02-14 00:27:48,068  VAE Training   INFO  Validation loss decreased (14.377407 --> 14.171335).  Saving model ...
+2023-02-14 00:27:49,487  VAE Training   INFO  Epoch: 7/150	Train Loss: 14.2889	Val Loss: 14.1713
+2023-02-14 00:27:50,492  VAE Training   INFO  Validation loss decreased (14.171335 --> 14.060214).  Saving model ...
+2023-02-14 00:27:50,537  VAE Training   INFO  Epoch: 8/150	Train Loss: 14.0956	Val Loss: 14.0602
+2023-02-14 00:27:51,470  VAE Training   INFO  Validation loss decreased (14.060214 --> 13.876693).  Saving model ...
+2023-02-14 00:27:51,536  VAE Training   INFO  Epoch: 9/150	Train Loss: 13.9644	Val Loss: 13.8767
+2023-02-14 00:27:52,493  VAE Training   INFO  Validation loss decreased (13.876693 --> 13.683071).  Saving model ...
+2023-02-14 00:27:52,523  VAE Training   INFO  Epoch: 10/150	Train Loss: 13.7948	Val Loss: 13.6831
+2023-02-14 00:27:53,527  VAE Training   INFO  Validation loss decreased (13.683071 --> 13.636453).  Saving model ...
+2023-02-14 00:27:53,594  VAE Training   INFO  Epoch: 11/150	Train Loss: 13.6338	Val Loss: 13.6365
+2023-02-14 00:27:54,557  VAE Training   INFO  Validation loss decreased (13.636453 --> 13.485244).  Saving model ...
+2023-02-14 00:27:54,596  VAE Training   INFO  Epoch: 12/150	Train Loss: 13.5411	Val Loss: 13.4852
+2023-02-14 00:27:55,709  VAE Training   INFO  Validation loss decreased (13.485244 --> 13.328832).  Saving model ...
+2023-02-14 00:27:55,771  VAE Training   INFO  Epoch: 13/150	Train Loss: 13.4349	Val Loss: 13.3288
+2023-02-14 00:27:56,713  VAE Training   INFO  Validation loss decreased (13.328832 --> 13.327313).  Saving model ...
+2023-02-14 00:27:56,759  VAE Training   INFO  Epoch: 14/150	Train Loss: 13.3264	Val Loss: 13.3273
+2023-02-14 00:27:57,826  VAE Training   INFO  Validation loss decreased (13.327313 --> 13.273582).  Saving model ...
+2023-02-14 00:27:57,867  VAE Training   INFO  Epoch: 15/150	Train Loss: 13.2434	Val Loss: 13.2736
+2023-02-14 00:27:58,950  VAE Training   INFO  Validation loss decreased (13.273582 --> 13.174345).  Saving model ...
+2023-02-14 00:27:59,053  VAE Training   INFO  Epoch: 16/150	Train Loss: 13.1812	Val Loss: 13.1743
+2023-02-14 00:28:00,084  VAE Training   INFO  Validation loss decreased (13.174345 --> 13.049483).  Saving model ...
+2023-02-14 00:28:00,122  VAE Training   INFO  Epoch: 17/150	Train Loss: 13.0963	Val Loss: 13.0495
+2023-02-14 00:28:00,977  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:00,977  VAE Training   INFO  Epoch: 18/150	Train Loss: 13.0479	Val Loss: 13.0622
+2023-02-14 00:28:01,787  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:01,787  VAE Training   INFO  Epoch: 19/150	Train Loss: 13.0131	Val Loss: 13.0630
+2023-02-14 00:28:02,674  VAE Training   INFO  Validation loss decreased (13.049483 --> 13.010290).  Saving model ...
+2023-02-14 00:28:03,131  VAE Training   INFO  Epoch: 20/150	Train Loss: 12.9365	Val Loss: 13.0103
+2023-02-14 00:28:03,991  VAE Training   INFO  Validation loss decreased (13.010290 --> 12.956738).  Saving model ...
+2023-02-14 00:28:04,417  VAE Training   INFO  Epoch: 21/150	Train Loss: 12.9025	Val Loss: 12.9567
+2023-02-14 00:28:05,386  VAE Training   INFO  Validation loss decreased (12.956738 --> 12.821658).  Saving model ...
+2023-02-14 00:28:07,438  VAE Training   INFO  Epoch: 22/150	Train Loss: 12.9105	Val Loss: 12.8217
+2023-02-14 00:28:08,458  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:08,458  VAE Training   INFO  Epoch: 23/150	Train Loss: 12.8223	Val Loss: 12.9031
+2023-02-14 00:28:09,231  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:10,309  VAE Training   INFO  Epoch: 24/150	Train Loss: 12.8031	Val Loss: 12.8409
+2023-02-14 00:28:11,398  VAE Training   INFO  Validation loss decreased (12.821658 --> 12.806603).  Saving model ...
+2023-02-14 00:28:11,457  VAE Training   INFO  Epoch: 25/150	Train Loss: 12.8083	Val Loss: 12.8066
+2023-02-14 00:28:12,462  VAE Training   INFO  Validation loss decreased (12.806603 --> 12.768032).  Saving model ...
+2023-02-14 00:28:12,481  VAE Training   INFO  Epoch: 26/150	Train Loss: 12.7564	Val Loss: 12.7680
+2023-02-14 00:28:13,441  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:13,441  VAE Training   INFO  Epoch: 27/150	Train Loss: 12.7569	Val Loss: 12.7819
+2023-02-14 00:28:14,355  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:14,355  VAE Training   INFO  Epoch: 28/150	Train Loss: 12.6910	Val Loss: 12.7732
+2023-02-14 00:28:15,427  VAE Training   INFO  Validation loss decreased (12.768032 --> 12.745038).  Saving model ...
+2023-02-14 00:28:15,474  VAE Training   INFO  Epoch: 29/150	Train Loss: 12.7084	Val Loss: 12.7450
+2023-02-14 00:28:16,437  VAE Training   INFO  Validation loss decreased (12.745038 --> 12.729076).  Saving model ...
+2023-02-14 00:28:16,499  VAE Training   INFO  Epoch: 30/150	Train Loss: 12.6743	Val Loss: 12.7291
+2023-02-14 00:28:17,306  VAE Training   INFO  Validation loss decreased (12.729076 --> 12.703622).  Saving model ...
+2023-02-14 00:28:17,332  VAE Training   INFO  Epoch: 31/150	Train Loss: 12.6433	Val Loss: 12.7036
+2023-02-14 00:28:18,254  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:18,254  VAE Training   INFO  Epoch: 32/150	Train Loss: 12.6305	Val Loss: 12.7055
+2023-02-14 00:28:19,019  VAE Training   INFO  Validation loss decreased (12.703622 --> 12.609847).  Saving model ...
+2023-02-14 00:28:19,098  VAE Training   INFO  Epoch: 33/150	Train Loss: 12.6113	Val Loss: 12.6098
+2023-02-14 00:28:19,970  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:19,970  VAE Training   INFO  Epoch: 34/150	Train Loss: 12.5736	Val Loss: 12.6514
+2023-02-14 00:28:20,917  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:20,917  VAE Training   INFO  Epoch: 35/150	Train Loss: 12.5677	Val Loss: 12.6731
+2023-02-14 00:28:21,828  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:28:21,829  VAE Training   INFO  Epoch: 36/150	Train Loss: 12.5800	Val Loss: 12.6532
+2023-02-14 00:28:22,669  VAE Training   INFO  Validation loss decreased (12.609847 --> 12.570989).  Saving model ...
+2023-02-14 00:28:22,721  VAE Training   INFO  Epoch: 37/150	Train Loss: 12.4781	Val Loss: 12.5710
+2023-02-14 00:28:23,537  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:23,538  VAE Training   INFO  Epoch: 38/150	Train Loss: 12.5048	Val Loss: 12.6231
+2023-02-14 00:28:24,421  VAE Training   INFO  Validation loss decreased (12.570989 --> 12.480314).  Saving model ...
+2023-02-14 00:28:24,460  VAE Training   INFO  Epoch: 39/150	Train Loss: 12.4738	Val Loss: 12.4803
+2023-02-14 00:28:25,287  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:25,287  VAE Training   INFO  Epoch: 40/150	Train Loss: 12.4893	Val Loss: 12.5517
+2023-02-14 00:28:26,337  VAE Training   INFO  Validation loss decreased (12.480314 --> 12.466065).  Saving model ...
+2023-02-14 00:28:26,397  VAE Training   INFO  Epoch: 41/150	Train Loss: 12.4742	Val Loss: 12.4661
+2023-02-14 00:28:27,396  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:27,396  VAE Training   INFO  Epoch: 42/150	Train Loss: 12.4723	Val Loss: 12.5212
+2023-02-14 00:28:28,428  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:28,428  VAE Training   INFO  Epoch: 43/150	Train Loss: 12.4482	Val Loss: 12.4892
+2023-02-14 00:28:29,442  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:28:29,442  VAE Training   INFO  Epoch: 44/150	Train Loss: 12.4376	Val Loss: 12.5384
+2023-02-14 00:28:30,464  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:28:30,465  VAE Training   INFO  Epoch: 45/150	Train Loss: 12.3762	Val Loss: 12.4790
+2023-02-14 00:28:31,474  VAE Training   INFO  EarlyStopping counter: 5 out of 7
+2023-02-14 00:28:31,474  VAE Training   INFO  Epoch: 46/150	Train Loss: 12.4162	Val Loss: 12.4772
+2023-02-14 00:28:32,460  VAE Training   INFO  Validation loss decreased (12.466065 --> 12.452564).  Saving model ...
+2023-02-14 00:28:32,485  VAE Training   INFO  Epoch: 47/150	Train Loss: 12.3446	Val Loss: 12.4526
+2023-02-14 00:28:33,504  VAE Training   INFO  Validation loss decreased (12.452564 --> 12.431860).  Saving model ...
+2023-02-14 00:28:33,540  VAE Training   INFO  Epoch: 48/150	Train Loss: 12.3530	Val Loss: 12.4319
+2023-02-14 00:28:34,522  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:34,522  VAE Training   INFO  Epoch: 49/150	Train Loss: 12.3699	Val Loss: 12.4525
+2023-02-14 00:28:35,364  VAE Training   INFO  Validation loss decreased (12.431860 --> 12.424738).  Saving model ...
+2023-02-14 00:28:35,380  VAE Training   INFO  Epoch: 50/150	Train Loss: 12.3852	Val Loss: 12.4247
+2023-02-14 00:28:36,214  VAE Training   INFO  Validation loss decreased (12.424738 --> 12.421843).  Saving model ...
+2023-02-14 00:28:36,282  VAE Training   INFO  Epoch: 51/150	Train Loss: 12.3639	Val Loss: 12.4218
+2023-02-14 00:28:37,106  VAE Training   INFO  Validation loss decreased (12.421843 --> 12.408266).  Saving model ...
+2023-02-14 00:28:37,123  VAE Training   INFO  Epoch: 52/150	Train Loss: 12.3289	Val Loss: 12.4083
+2023-02-14 00:28:38,042  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:38,042  VAE Training   INFO  Epoch: 53/150	Train Loss: 12.3054	Val Loss: 12.5262
+2023-02-14 00:28:39,118  VAE Training   INFO  Validation loss decreased (12.408266 --> 12.398657).  Saving model ...
+2023-02-14 00:28:39,138  VAE Training   INFO  Epoch: 54/150	Train Loss: 12.3039	Val Loss: 12.3987
+2023-02-14 00:28:40,214  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:40,215  VAE Training   INFO  Epoch: 55/150	Train Loss: 12.2751	Val Loss: 12.4369
+2023-02-14 00:28:41,180  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:41,181  VAE Training   INFO  Epoch: 56/150	Train Loss: 12.2782	Val Loss: 12.4109
+2023-02-14 00:28:41,998  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:28:41,998  VAE Training   INFO  Epoch: 57/150	Train Loss: 12.2908	Val Loss: 12.4006
+2023-02-14 00:28:42,852  VAE Training   INFO  Validation loss decreased (12.398657 --> 12.369907).  Saving model ...
+2023-02-14 00:28:42,898  VAE Training   INFO  Epoch: 58/150	Train Loss: 12.2858	Val Loss: 12.3699
+2023-02-14 00:28:43,763  VAE Training   INFO  Validation loss decreased (12.369907 --> 12.341861).  Saving model ...
+2023-02-14 00:28:43,777  VAE Training   INFO  Epoch: 59/150	Train Loss: 12.2781	Val Loss: 12.3419
+2023-02-14 00:28:44,569  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:44,569  VAE Training   INFO  Epoch: 60/150	Train Loss: 12.2688	Val Loss: 12.3771
+2023-02-14 00:28:45,244  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:45,244  VAE Training   INFO  Epoch: 61/150	Train Loss: 12.2725	Val Loss: 12.3845
+2023-02-14 00:28:45,941  VAE Training   INFO  Validation loss decreased (12.341861 --> 12.330114).  Saving model ...
+2023-02-14 00:28:45,958  VAE Training   INFO  Epoch: 62/150	Train Loss: 12.2218	Val Loss: 12.3301
+2023-02-14 00:28:46,998  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:46,998  VAE Training   INFO  Epoch: 63/150	Train Loss: 12.2365	Val Loss: 12.3645
+2023-02-14 00:28:47,913  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:47,913  VAE Training   INFO  Epoch: 64/150	Train Loss: 12.2228	Val Loss: 12.3654
+2023-02-14 00:28:48,793  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:28:48,794  VAE Training   INFO  Epoch: 65/150	Train Loss: 12.2377	Val Loss: 12.3708
+2023-02-14 00:28:49,740  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:28:49,741  VAE Training   INFO  Epoch: 66/150	Train Loss: 12.2546	Val Loss: 12.3330
+2023-02-14 00:28:50,601  VAE Training   INFO  Validation loss decreased (12.330114 --> 12.329874).  Saving model ...
+2023-02-14 00:28:50,614  VAE Training   INFO  Epoch: 67/150	Train Loss: 12.2247	Val Loss: 12.3299
+2023-02-14 00:28:51,499  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:51,499  VAE Training   INFO  Epoch: 68/150	Train Loss: 12.2125	Val Loss: 12.3334
+2023-02-14 00:28:52,363  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:52,364  VAE Training   INFO  Epoch: 69/150	Train Loss: 12.2190	Val Loss: 12.3453
+2023-02-14 00:28:53,229  VAE Training   INFO  Validation loss decreased (12.329874 --> 12.242146).  Saving model ...
+2023-02-14 00:28:53,263  VAE Training   INFO  Epoch: 70/150	Train Loss: 12.1778	Val Loss: 12.2421
+2023-02-14 00:28:54,199  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:28:54,199  VAE Training   INFO  Epoch: 71/150	Train Loss: 12.1586	Val Loss: 12.3229
+2023-02-14 00:28:54,915  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:28:54,916  VAE Training   INFO  Epoch: 72/150	Train Loss: 12.1621	Val Loss: 12.2755
+2023-02-14 00:28:55,642  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:28:55,642  VAE Training   INFO  Epoch: 73/150	Train Loss: 12.1338	Val Loss: 12.2576
+2023-02-14 00:28:56,352  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:28:56,353  VAE Training   INFO  Epoch: 74/150	Train Loss: 12.1699	Val Loss: 12.3005
+2023-02-14 00:28:57,004  VAE Training   INFO  EarlyStopping counter: 5 out of 7
+2023-02-14 00:28:57,004  VAE Training   INFO  Epoch: 75/150	Train Loss: 12.1503	Val Loss: 12.3083
+2023-02-14 00:28:57,676  VAE Training   INFO  EarlyStopping counter: 6 out of 7
+2023-02-14 00:28:57,676  VAE Training   INFO  Epoch: 76/150	Train Loss: 12.1803	Val Loss: 12.2699
+2023-02-14 00:28:58,341  VAE Training   INFO  EarlyStopping counter: 7 out of 7
+2023-02-14 00:28:58,341  VAE Training   INFO  Epoch: 77/150	Train Loss: 12.1498	Val Loss: 12.2722
+2023-02-14 00:28:58,341  VAE Training  CRITICAL  Triggering Early Stop
+2023-02-14 00:28:58,351  matplotlib.pyplot  DEBUG  Loaded backend agg version unknown.
+2023-02-14 00:28:59,045  VAE Training   INFO  Training for gender = 0 with 24891 datapoints
+2023-02-14 00:29:00,804  VAE Training   INFO  Validation loss decreased (inf --> 15.708798).  Saving model ...
+2023-02-14 00:29:00,819  VAE Training   INFO  Epoch: 1/150	Train Loss: 23.0775	Val Loss: 15.7088
+2023-02-14 00:29:02,623  VAE Training   INFO  Validation loss decreased (15.708798 --> 13.834982).  Saving model ...
+2023-02-14 00:29:02,639  VAE Training   INFO  Epoch: 2/150	Train Loss: 14.4552	Val Loss: 13.8350
+2023-02-14 00:29:04,492  VAE Training   INFO  Validation loss decreased (13.834982 --> 13.364731).  Saving model ...
+2023-02-14 00:29:04,501  VAE Training   INFO  Epoch: 3/150	Train Loss: 13.6345	Val Loss: 13.3647
+2023-02-14 00:29:06,236  VAE Training   INFO  Validation loss decreased (13.364731 --> 13.054197).  Saving model ...
+2023-02-14 00:29:06,254  VAE Training   INFO  Epoch: 4/150	Train Loss: 13.2290	Val Loss: 13.0542
+2023-02-14 00:29:08,120  VAE Training   INFO  Validation loss decreased (13.054197 --> 12.852246).  Saving model ...
+2023-02-14 00:29:08,136  VAE Training   INFO  Epoch: 5/150	Train Loss: 12.9974	Val Loss: 12.8522
+2023-02-14 00:29:10,114  VAE Training   INFO  Validation loss decreased (12.852246 --> 12.693820).  Saving model ...
+2023-02-14 00:29:10,181  VAE Training   INFO  Epoch: 6/150	Train Loss: 12.8249	Val Loss: 12.6938
+2023-02-14 00:29:12,334  VAE Training   INFO  Validation loss decreased (12.693820 --> 12.537643).  Saving model ...
+2023-02-14 00:29:12,413  VAE Training   INFO  Epoch: 7/150	Train Loss: 12.6950	Val Loss: 12.5376
+2023-02-14 00:29:14,485  VAE Training   INFO  Validation loss decreased (12.537643 --> 12.462562).  Saving model ...
+2023-02-14 00:29:14,508  VAE Training   INFO  Epoch: 8/150	Train Loss: 12.5917	Val Loss: 12.4626
+2023-02-14 00:29:16,403  VAE Training   INFO  Validation loss decreased (12.462562 --> 12.343717).  Saving model ...
+2023-02-14 00:29:16,421  VAE Training   INFO  Epoch: 9/150	Train Loss: 12.4465	Val Loss: 12.3437
+2023-02-14 00:29:18,409  VAE Training   INFO  Validation loss decreased (12.343717 --> 12.218507).  Saving model ...
+2023-02-14 00:29:18,535  VAE Training   INFO  Epoch: 10/150	Train Loss: 12.3578	Val Loss: 12.2185
+2023-02-14 00:29:20,371  VAE Training   INFO  Validation loss decreased (12.218507 --> 12.169559).  Saving model ...
+2023-02-14 00:29:20,389  VAE Training   INFO  Epoch: 11/150	Train Loss: 12.2460	Val Loss: 12.1696
+2023-02-14 00:29:22,224  VAE Training   INFO  Validation loss decreased (12.169559 --> 12.050674).  Saving model ...
+2023-02-14 00:29:22,282  VAE Training   INFO  Epoch: 12/150	Train Loss: 12.1880	Val Loss: 12.0507
+2023-02-14 00:29:24,535  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:29:24,535  VAE Training   INFO  Epoch: 13/150	Train Loss: 12.1136	Val Loss: 12.0531
+2023-02-14 00:29:26,288  VAE Training   INFO  Validation loss decreased (12.050674 --> 11.905234).  Saving model ...
+2023-02-14 00:29:26,320  VAE Training   INFO  Epoch: 14/150	Train Loss: 12.0627	Val Loss: 11.9052
+2023-02-14 00:29:28,047  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:29:28,047  VAE Training   INFO  Epoch: 15/150	Train Loss: 11.9977	Val Loss: 11.9107
+2023-02-14 00:29:29,878  VAE Training   INFO  Validation loss decreased (11.905234 --> 11.890252).  Saving model ...
+2023-02-14 00:29:29,892  VAE Training   INFO  Epoch: 16/150	Train Loss: 11.9525	Val Loss: 11.8903
+2023-02-14 00:29:31,742  VAE Training   INFO  Validation loss decreased (11.890252 --> 11.802415).  Saving model ...
+2023-02-14 00:29:31,794  VAE Training   INFO  Epoch: 17/150	Train Loss: 11.8928	Val Loss: 11.8024
+2023-02-14 00:29:33,553  VAE Training   INFO  Validation loss decreased (11.802415 --> 11.786417).  Saving model ...
+2023-02-14 00:29:33,573  VAE Training   INFO  Epoch: 18/150	Train Loss: 11.8704	Val Loss: 11.7864
+2023-02-14 00:29:35,305  VAE Training   INFO  Validation loss decreased (11.786417 --> 11.753987).  Saving model ...
+2023-02-14 00:29:35,328  VAE Training   INFO  Epoch: 19/150	Train Loss: 11.8126	Val Loss: 11.7540
+2023-02-14 00:29:37,026  VAE Training   INFO  Validation loss decreased (11.753987 --> 11.730455).  Saving model ...
+2023-02-14 00:29:37,066  VAE Training   INFO  Epoch: 20/150	Train Loss: 11.7877	Val Loss: 11.7305
+2023-02-14 00:29:38,778  VAE Training   INFO  Validation loss decreased (11.730455 --> 11.723870).  Saving model ...
+2023-02-14 00:29:38,801  VAE Training   INFO  Epoch: 21/150	Train Loss: 11.7735	Val Loss: 11.7239
+2023-02-14 00:29:40,623  VAE Training   INFO  Validation loss decreased (11.723870 --> 11.723413).  Saving model ...
+2023-02-14 00:29:40,667  VAE Training   INFO  Epoch: 22/150	Train Loss: 11.7520	Val Loss: 11.7234
+2023-02-14 00:29:42,467  VAE Training   INFO  Validation loss decreased (11.723413 --> 11.696643).  Saving model ...
+2023-02-14 00:29:42,477  VAE Training   INFO  Epoch: 23/150	Train Loss: 11.7299	Val Loss: 11.6966
+2023-02-14 00:29:44,473  VAE Training   INFO  Validation loss decreased (11.696643 --> 11.647713).  Saving model ...
+2023-02-14 00:29:44,494  VAE Training   INFO  Epoch: 24/150	Train Loss: 11.7257	Val Loss: 11.6477
+2023-02-14 00:29:46,683  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:29:46,683  VAE Training   INFO  Epoch: 25/150	Train Loss: 11.6616	Val Loss: 11.6869
+2023-02-14 00:29:48,592  VAE Training   INFO  Validation loss decreased (11.647713 --> 11.570441).  Saving model ...
+2023-02-14 00:29:48,632  VAE Training   INFO  Epoch: 26/150	Train Loss: 11.6431	Val Loss: 11.5704
+2023-02-14 00:29:50,394  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:29:50,394  VAE Training   INFO  Epoch: 27/150	Train Loss: 11.6153	Val Loss: 11.5999
+2023-02-14 00:29:52,163  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:29:52,163  VAE Training   INFO  Epoch: 28/150	Train Loss: 11.5973	Val Loss: 11.5712
+2023-02-14 00:29:53,854  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:29:53,854  VAE Training   INFO  Epoch: 29/150	Train Loss: 11.5729	Val Loss: 11.5817
+2023-02-14 00:29:55,699  VAE Training   INFO  Validation loss decreased (11.570441 --> 11.520312).  Saving model ...
+2023-02-14 00:29:55,730  VAE Training   INFO  Epoch: 30/150	Train Loss: 11.5573	Val Loss: 11.5203
+2023-02-14 00:29:57,555  VAE Training   INFO  Validation loss decreased (11.520312 --> 11.515729).  Saving model ...
+2023-02-14 00:29:57,587  VAE Training   INFO  Epoch: 31/150	Train Loss: 11.5860	Val Loss: 11.5157
+2023-02-14 00:29:59,290  VAE Training   INFO  Validation loss decreased (11.515729 --> 11.505908).  Saving model ...
+2023-02-14 00:29:59,305  VAE Training   INFO  Epoch: 32/150	Train Loss: 11.5641	Val Loss: 11.5059
+2023-02-14 00:30:01,388  VAE Training   INFO  Validation loss decreased (11.505908 --> 11.481315).  Saving model ...
+2023-02-14 00:30:01,409  VAE Training   INFO  Epoch: 33/150	Train Loss: 11.5350	Val Loss: 11.4813
+2023-02-14 00:30:03,296  VAE Training   INFO  Validation loss decreased (11.481315 --> 11.462807).  Saving model ...
+2023-02-14 00:30:03,324  VAE Training   INFO  Epoch: 34/150	Train Loss: 11.5123	Val Loss: 11.4628
+2023-02-14 00:30:05,253  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:05,253  VAE Training   INFO  Epoch: 35/150	Train Loss: 11.5131	Val Loss: 11.4827
+2023-02-14 00:30:07,411  VAE Training   INFO  Validation loss decreased (11.462807 --> 11.429000).  Saving model ...
+2023-02-14 00:30:07,426  VAE Training   INFO  Epoch: 36/150	Train Loss: 11.4819	Val Loss: 11.4290
+2023-02-14 00:30:09,553  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:09,553  VAE Training   INFO  Epoch: 37/150	Train Loss: 11.4669	Val Loss: 11.4528
+2023-02-14 00:30:11,493  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:30:11,493  VAE Training   INFO  Epoch: 38/150	Train Loss: 11.4528	Val Loss: 11.4647
+2023-02-14 00:30:13,199  VAE Training   INFO  Validation loss decreased (11.429000 --> 11.425346).  Saving model ...
+2023-02-14 00:30:13,264  VAE Training   INFO  Epoch: 39/150	Train Loss: 11.4386	Val Loss: 11.4253
+2023-02-14 00:30:15,094  VAE Training   INFO  Validation loss decreased (11.425346 --> 11.381592).  Saving model ...
+2023-02-14 00:30:15,113  VAE Training   INFO  Epoch: 40/150	Train Loss: 11.4548	Val Loss: 11.3816
+2023-02-14 00:30:16,894  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:16,895  VAE Training   INFO  Epoch: 41/150	Train Loss: 11.4276	Val Loss: 11.4288
+2023-02-14 00:30:18,832  VAE Training   INFO  Validation loss decreased (11.381592 --> 11.369918).  Saving model ...
+2023-02-14 00:30:18,855  VAE Training   INFO  Epoch: 42/150	Train Loss: 11.4129	Val Loss: 11.3699
+2023-02-14 00:30:20,261  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:20,261  VAE Training   INFO  Epoch: 43/150	Train Loss: 11.3966	Val Loss: 11.3961
+2023-02-14 00:30:21,870  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:30:21,870  VAE Training   INFO  Epoch: 44/150	Train Loss: 11.4014	Val Loss: 11.4155
+2023-02-14 00:30:23,616  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:30:23,616  VAE Training   INFO  Epoch: 45/150	Train Loss: 11.3675	Val Loss: 11.3744
+2023-02-14 00:30:25,327  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:30:25,327  VAE Training   INFO  Epoch: 46/150	Train Loss: 11.3755	Val Loss: 11.3805
+2023-02-14 00:30:27,158  VAE Training   INFO  Validation loss decreased (11.369918 --> 11.312767).  Saving model ...
+2023-02-14 00:30:27,202  VAE Training   INFO  Epoch: 47/150	Train Loss: 11.3690	Val Loss: 11.3128
+2023-02-14 00:30:29,023  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:29,023  VAE Training   INFO  Epoch: 48/150	Train Loss: 11.3643	Val Loss: 11.3462
+2023-02-14 00:30:30,694  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:30:30,694  VAE Training   INFO  Epoch: 49/150	Train Loss: 11.3639	Val Loss: 11.3290
+2023-02-14 00:30:32,368  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:30:32,368  VAE Training   INFO  Epoch: 50/150	Train Loss: 11.3418	Val Loss: 11.3451
+2023-02-14 00:30:34,112  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:30:34,113  VAE Training   INFO  Epoch: 51/150	Train Loss: 11.3575	Val Loss: 11.3395
+2023-02-14 00:30:35,875  VAE Training   INFO  Validation loss decreased (11.312767 --> 11.312189).  Saving model ...
+2023-02-14 00:30:35,925  VAE Training   INFO  Epoch: 52/150	Train Loss: 11.3685	Val Loss: 11.3122
+2023-02-14 00:30:37,621  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:37,621  VAE Training   INFO  Epoch: 53/150	Train Loss: 11.3262	Val Loss: 11.3228
+2023-02-14 00:30:39,334  VAE Training   INFO  Validation loss decreased (11.312189 --> 11.310530).  Saving model ...
+2023-02-14 00:30:39,351  VAE Training   INFO  Epoch: 54/150	Train Loss: 11.3149	Val Loss: 11.3105
+2023-02-14 00:30:41,068  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:41,068  VAE Training   INFO  Epoch: 55/150	Train Loss: 11.3296	Val Loss: 11.3416
+2023-02-14 00:30:42,912  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:30:42,912  VAE Training   INFO  Epoch: 56/150	Train Loss: 11.3389	Val Loss: 11.3107
+2023-02-14 00:30:44,524  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:30:44,525  VAE Training   INFO  Epoch: 57/150	Train Loss: 11.3134	Val Loss: 11.3651
+2023-02-14 00:30:45,905  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:30:45,905  VAE Training   INFO  Epoch: 58/150	Train Loss: 11.3250	Val Loss: 11.3249
+2023-02-14 00:30:47,981  VAE Training   INFO  Validation loss decreased (11.310530 --> 11.276516).  Saving model ...
+2023-02-14 00:30:48,016  VAE Training   INFO  Epoch: 59/150	Train Loss: 11.2817	Val Loss: 11.2765
+2023-02-14 00:30:49,845  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:49,845  VAE Training   INFO  Epoch: 60/150	Train Loss: 11.3002	Val Loss: 11.3033
+2023-02-14 00:30:51,579  VAE Training   INFO  Validation loss decreased (11.276516 --> 11.265169).  Saving model ...
+2023-02-14 00:30:51,597  VAE Training   INFO  Epoch: 61/150	Train Loss: 11.2928	Val Loss: 11.2652
+2023-02-14 00:30:53,332  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:53,332  VAE Training   INFO  Epoch: 62/150	Train Loss: 11.2863	Val Loss: 11.2756
+2023-02-14 00:30:55,083  VAE Training   INFO  Validation loss decreased (11.265169 --> 11.236895).  Saving model ...
+2023-02-14 00:30:55,099  VAE Training   INFO  Epoch: 63/150	Train Loss: 11.2788	Val Loss: 11.2369
+2023-02-14 00:30:56,887  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:30:56,888  VAE Training   INFO  Epoch: 64/150	Train Loss: 11.2965	Val Loss: 11.3135
+2023-02-14 00:30:58,780  VAE Training   INFO  Validation loss decreased (11.236895 --> 11.230596).  Saving model ...
+2023-02-14 00:30:58,830  VAE Training   INFO  Epoch: 65/150	Train Loss: 11.2703	Val Loss: 11.2306
+2023-02-14 00:31:00,694  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:31:00,694  VAE Training   INFO  Epoch: 66/150	Train Loss: 11.2513	Val Loss: 11.2804
+2023-02-14 00:31:02,565  VAE Training   INFO  Validation loss decreased (11.230596 --> 11.228027).  Saving model ...
+2023-02-14 00:31:02,580  VAE Training   INFO  Epoch: 67/150	Train Loss: 11.2837	Val Loss: 11.2280
+2023-02-14 00:31:04,509  VAE Training   INFO  EarlyStopping counter: 1 out of 7
+2023-02-14 00:31:04,509  VAE Training   INFO  Epoch: 68/150	Train Loss: 11.2365	Val Loss: 11.2957
+2023-02-14 00:31:06,154  VAE Training   INFO  EarlyStopping counter: 2 out of 7
+2023-02-14 00:31:06,154  VAE Training   INFO  Epoch: 69/150	Train Loss: 11.2511	Val Loss: 11.2971
+2023-02-14 00:31:07,562  VAE Training   INFO  EarlyStopping counter: 3 out of 7
+2023-02-14 00:31:07,562  VAE Training   INFO  Epoch: 70/150	Train Loss: 11.2281	Val Loss: 11.2965
+2023-02-14 00:31:09,238  VAE Training   INFO  EarlyStopping counter: 4 out of 7
+2023-02-14 00:31:09,238  VAE Training   INFO  Epoch: 71/150	Train Loss: 11.2174	Val Loss: 11.2356
+2023-02-14 00:31:10,950  VAE Training   INFO  EarlyStopping counter: 5 out of 7
+2023-02-14 00:31:10,950  VAE Training   INFO  Epoch: 72/150	Train Loss: 11.2498	Val Loss: 11.2589
+2023-02-14 00:31:13,000  VAE Training   INFO  EarlyStopping counter: 6 out of 7
+2023-02-14 00:31:13,001  VAE Training   INFO  Epoch: 73/150	Train Loss: 11.2431	Val Loss: 11.2610
+2023-02-14 00:31:15,140  VAE Training   INFO  EarlyStopping counter: 7 out of 7
+2023-02-14 00:31:15,140  VAE Training   INFO  Epoch: 74/150	Train Loss: 11.2155	Val Loss: 11.2506
+2023-02-14 00:31:15,140  VAE Training  CRITICAL  Triggering Early Stop

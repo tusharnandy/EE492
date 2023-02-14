@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python vae_trainer.py --split --verbose --xA gender --epochs 150 --run_number male_female --vae vae
