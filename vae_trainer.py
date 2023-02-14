@@ -10,6 +10,7 @@ import random
 import datetime
 import os
 from tqdm import tqdm
+import numpy as np
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, help="Name of the dataset", default="adult_income", choices=["adult_income"])
@@ -24,7 +25,7 @@ parser.add_argument('--patience', type=int, help="Patience for early stopping", 
 parser.add_argument('--verbose', action='store_true')
 parser.add_argument('--split', action='store_true', help='Condition dataset on some x_A')
 parser.add_argument('--xA', type=str, help="Value of xA: will be considered only if --split is provided")
-parser.add_argument('--vae', type=str, help="Type of VAE to be used", default="vae", choices=["vae", "rbvae"])
+parser.add_argument('--vae', type=str, help="Type of VAE to be used", default="vae", choices=["vae", "rbvae", "mgvae"])
 args = parser.parse_args()
 
 
@@ -40,10 +41,18 @@ def train(model, dataloader, len_train, criterion, optimizer, device, **kwargs):
             reconstruction, mu, logvar = model(data)
             bce_loss = criterion(reconstruction, data)
             loss = model.vae_loss(bce_loss, mu, logvar)
+        
         elif args.vae == 'rbvae':
             reconstruction, mu = model(data, **kwargs)
             bce_loss = criterion(reconstruction, data)
             loss = model.vae_loss(bce_loss, mu)
+
+        elif args.vae == 'mgvae':
+            #print('$$$$', data.shape)            
+            reconstruction, mu, logvar, logits_ = model(data, device, **kwargs)
+            #print('####', reconstruction.shape)
+            bce_loss = criterion(reconstruction, data)
+            loss = model.vae_loss(bce_loss, mu, logvar, logits_)
 
         running_loss += loss.item()
         loss.backward()
@@ -67,6 +76,10 @@ def validate(model, dataloader, len_test, criterion, device, **kwargs):
                 reconstruction, mu = model(data, **kwargs)
                 bce_loss = criterion(reconstruction, data)
                 loss = model.vae_loss(bce_loss, mu)
+            elif args.vae == 'mgvae':
+                reconstruction, mu, logvar, logits_ = model(data, device, **kwargs)
+                bce_loss = criterion(reconstruction, data)
+                loss = model.vae_loss(bce_loss, mu, logvar, logits_)
 
             running_loss += loss.item()
 
@@ -94,7 +107,7 @@ def trainer(model, train_loader, test_loader, len_train, len_test, device, save_
 
         if args.vae == 'rbvae':
             kwargs['steps'] += 1
-            if kwargs['steps'] % 1000 == 0:
+            if kwargs['steps'] % kwargs['update_time'] == 0:
                 kwargs['tau'] = max(kwargs['tau'] * np.exp(-kwargs['anneal_rate']*kwargs['steps']), kwargs['tau_min'])
         
     model.load_state_dict(torch.load(best_model_path))
@@ -129,11 +142,11 @@ if __name__ == '__main__':
         train_loader_1, test_loader_1, len_train_1, len_test_1, feature_dim_1, num_cols_1, train_loader_0, test_loader_0, len_train_0, len_test_0, feature_dim_0, num_cols_0 = utils.get_split_dataset(args.dataset, args.xA, train_batch_size=args.train_batch_size, test_batch_size=args.test_batch_size)
         file_logger.info(f'Training for {args.xA} = 1 with {len_train_1} datapoints')
         model_1 = VAE(feature_dim_1, args.vae_hidden_dim, args.vae_latent_dim).to(device)
-        model_1, train_loss_1, val_loss_1, last_epoch_1 = trainer(model_1, train_loader_1, test_loader_1, len_train_1, len_test_1, device, save_path=f'checkpoints/{args.dataset}/{args.vae}_xA=1')
+        model_1, train_loss_1, val_loss_1, last_epoch_1 = trainer(model_1, train_loader_1, test_loader_1, len_train_1, len_test_1, device, save_path=f'checkpoints/{args.dataset}/{args.vae}_xA=1', **kwargs)
         utils.plot_loss(range(0, last_epoch_1+1), train_loss_1, val_loss_1, args.dataset, args.run_number, specific_name=f'{args.xA}=1', vae=args.vae)
 
         # xA = 0
         file_logger.info(f'Training for {args.xA} = 0 with {len_train_0} datapoints')
         model_0 = VAE(feature_dim_0, args.vae_hidden_dim, args.vae_latent_dim).to(device)
-        model_0, train_loss_0, val_loss_0, last_epoch_0 = trainer(model_0, train_loader_0, test_loader_0, len_train_0, len_test_0, device, save_path=f'checkpoints/{args.dataset}/{args.vae}_xA=0')
+        model_0, train_loss_0, val_loss_0, last_epoch_0 = trainer(model_0, train_loader_0, test_loader_0, len_train_0, len_test_0, device, save_path=f'checkpoints/{args.dataset}/{args.vae}_xA=0', **kwargs)
         utils.plot_loss(range(0, last_epoch_0+1), train_loss_0, val_loss_0, args.dataset, args.run_number, specific_name=f'{args.xA}=0', vae=args.vae)

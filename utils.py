@@ -250,11 +250,11 @@ def vae_map(vae):
     if vae == 'vae':
         return VanillaVAE, {}
     elif vae == 'rbvae':
-        return RelaxedBernoulliVAE, {'tau': 1.0, 'tau_min': 0.1, 'anneal_rate': 3e-5, 'steps': 0, 'hard': False}
+        return RelaxedBernoulliVAE, {'tau': 1.0, 'tau_min': 0.1, 'anneal_rate': 3e-5, 'steps': 0, 'hard': False, 'update_time':1000}
     elif vae == 'bvae':
         return BernoulliVAE
     elif vae == 'mgvae':
-        return MixedGumbelVae
+        return MixedGumbelVae, {'tau': 1.0, 'tau_min': 0.5, 'anneal_rate': 3e-5, 'steps': 0, 'hard': False, 'update_time':100}
 
 
 

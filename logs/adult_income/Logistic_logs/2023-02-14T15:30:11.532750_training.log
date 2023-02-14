@@ -1,0 +1,9 @@
+2023-02-14 15:30:11,548  Blackbox: Logistic Training   INFO  Run Number: 2023-02-14T15:30:11.532750
+2023-02-14 15:30:15,253  Blackbox: Logistic Training   INFO  Epoch: 1/300	Train Loss: 0.0097	Val Loss: 0.0091	Train Acc: 73.3992	Val Acc: 74.5520
+2023-02-14 15:30:16,297  Blackbox: Logistic Training   INFO  Epoch: 2/300	Train Loss: 0.0088	Val Loss: 0.0085	Train Acc: 75.3544	Val Acc: 74.5520
+2023-02-14 15:30:17,357  Blackbox: Logistic Training   INFO  Epoch: 3/300	Train Loss: 0.0083	Val Loss: 0.0082	Train Acc: 75.3544	Val Acc: 74.5628
+2023-02-14 15:30:18,420  Blackbox: Logistic Training   INFO  Epoch: 4/300	Train Loss: 0.0081	Val Loss: 0.0080	Train Acc: 75.3598	Val Acc: 74.5737
+2023-02-14 15:30:19,512  Blackbox: Logistic Training   INFO  Epoch: 5/300	Train Loss: 0.0079	Val Loss: 0.0079	Train Acc: 75.3652	Val Acc: 74.5846
+2023-02-14 15:30:20,607  Blackbox: Logistic Training   INFO  Epoch: 6/300	Train Loss: 0.0077	Val Loss: 0.0077	Train Acc: 75.3679	Val Acc: 74.5737
+2023-02-14 15:30:21,800  Blackbox: Logistic Training   INFO  Epoch: 7/300	Train Loss: 0.0076	Val Loss: 0.0076	Train Acc: 75.4087	Val Acc: 74.6714
+2023-02-14 15:30:22,846  Blackbox: Logistic Training   INFO  Epoch: 8/300	Train Loss: 0.0075	Val Loss: 0.0075	Train Acc: 75.4277	Val Acc: 74.7909
