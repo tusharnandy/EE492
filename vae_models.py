@@ -86,7 +86,7 @@ class RelaxedBernoulliVAE(nn.Module):
         return recon, mu
 
     def sample(self, x, num_samples, device, **kwargs):
-        _, _, mu_logit = self.encode(x)
+        _, _, mu_logit = self.encode(x, **kwargs)
         z = torch.distributions.relaxed_bernoulli.RelaxedBernoulli(kwargs['tau'], logits=mu_logit).rsample((num_samples,))
         z = z.to(device)
         samples = self.decode(z)
