@@ -4,7 +4,7 @@ import torch.nn as nn
 
 
 class VanillaVAE(nn.Module):
-    def __init__(self, initial_feature_dim=102, hidden_dim=64, num_features=16, num_cols=None):
+    def __init__(self, initial_feature_dim=102, hidden_dim=64, num_features=16, num_cols=None, eps_num_samples=100):
         super(VanillaVAE, self).__init__()
         self.num_features = num_features
         self.enc1 = nn.Linear(initial_feature_dim, hidden_dim)
@@ -12,14 +12,17 @@ class VanillaVAE(nn.Module):
 
         self.dec1 = nn.Linear(num_features, hidden_dim)
         self.dec2 = nn.Linear(hidden_dim, initial_feature_dim)
+        
+        #for sampling
+        self.eps = torch.randn(eps_num_samples, self.num_features)
 
-    def reparameterize(self, mu, logvar):
+    def reparameterize(self, mu, logvar, **kwargs):
         std = torch.exp(0.5 * logvar)
         eps = torch.randn_like(std)
         sample = mu + eps * std
         return sample
 
-    def encode(self, x):
+    def encode(self, x, **kwargs):
         x = F.relu(self.enc1(x))
         x = self.enc2(x).view(-1, 2, self.num_features)
         mu = x[:, 0, :]
@@ -27,24 +30,24 @@ class VanillaVAE(nn.Module):
         z = self.reparameterize(mu, logvar)
         return z, mu, logvar
 
-    def decode(self, z):
+    def decode(self, z, **kwargs):
         x = F.relu(self.dec1(z))
         recon = torch.sigmoid(self.dec2(x))
         return recon
 
-    def forward(self, x):
+    def forward(self, x, **kwargs):
         z, mu, logvar = self.encode(x)
         recon = self.decode(z)
         return recon, mu, logvar
 
-    def sample(self, x, num_samples, device):
+    def sample(self, x, num_samples, device, **kwargs):
         _, mu, logvar = self.encode(x)
-        z = torch.randn(num_samples, self.num_features) * torch.exp(0.5 * logvar) + mu
+        z = self.eps[:num_samples].to(device) * torch.exp(0.5 * logvar) + mu
         z = z.to(device)
         samples = self.decode(z)
         return samples
 
-    def vae_loss(self, bce_loss, mu, logvar):
+    def vae_loss(self, bce_loss, mu, logvar, **kwargs):
         kl = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
         return bce_loss + kl
 
